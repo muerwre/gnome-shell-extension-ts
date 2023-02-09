@@ -1,16 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { ActorAlign } from "@gi-types/clutter10";
 import type Gio from "@gi-types/gio2";
 import { Label } from "@gi-types/st1";
 
-const { Button } = imports.ui.panelMenu;
 const { getSettings } = imports.misc.extensionUtils;
 const t = imports.misc.extensionUtils.gettext;
 
-export class Indicator extends Button {
+export class Indicator extends imports.ui.panelMenu.Button {
     // Settings
     private settings: Gio.Settings;
     // const settingsValues = unpackSettings(this.settings);

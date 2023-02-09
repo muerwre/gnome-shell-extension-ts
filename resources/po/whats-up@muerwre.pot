@@ -35,6 +35,6 @@ msgid "Right"
 msgstr ""
 
 #. Name of the button
-#: src/indicator/index.ts:26
+#: src/indicator/index.ts:21
 msgid "Whats Up"
 msgstr ""

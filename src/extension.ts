@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-
 import type Gio from "@gi-types/gio2";
 import GLib from "@gi-types/glib2";
 import GObject from "@gi-types/gobject2";
@@ -10,8 +5,8 @@ import GObject from "@gi-types/gobject2";
 import { Indicator } from "./indicator";
 
 const Main = imports.ui.main;
-const Mainloop = imports.mainloop;
 const { getSettings, initTranslations } = imports.misc.extensionUtils;
+const Mainloop = imports.mainloop;
 
 // Indicator
 const IndicatorGObjectClass = GObject.registerClass(Indicator);
@@ -29,7 +24,7 @@ class Extension {
     // Extension index
     private extensionIndex: number | null = null;
     // Indicator
-    private indicator: any;
+    private indicator: InstanceType<typeof Indicator> | null = null;
     // Timeout source
     private timeout: number | null = null;
 
@@ -67,7 +62,7 @@ class Extension {
                 const handlerId = this.settings.connect(
                     `changed::${key}`,
                     () => {
-                        this.indicator.update();
+                        this.indicator?.update();
                     },
                 );
                 this.signals.push(handlerId);
@@ -130,7 +125,7 @@ class Extension {
         // Update the indicator every second
         this.timeout = Mainloop.timeout_add_seconds(1, () => {
             // Update the indicator
-            this.indicator.update();
+            this.indicator?.update();
             // Leave the source in the main loop
             return GLib.SOURCE_CONTINUE;
         });

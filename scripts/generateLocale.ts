@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-
 import * as fillPotPo from "fill-pot-po";
 import fs from "fs";
 import gettextParser from "gettext-parser";
@@ -17,8 +12,12 @@ import { HtmlUtils } from "gettext-extractor/dist/html/utils";
 const RESOURCES_DIR = path.resolve(__dirname, "..", "resources");
 
 // UUID of the extension
-const UUID: string = JSON.parse(
-    fs.readFileSync(path.resolve(RESOURCES_DIR, "metadata.json")).toString(),
+const UUID: string = (
+    JSON.parse(
+        fs
+            .readFileSync(path.resolve(RESOURCES_DIR, "metadata.json"))
+            .toString(),
+    ) as { uuid: string }
 ).uuid;
 
 // Path to the directory with the `.po` and `.pot` files

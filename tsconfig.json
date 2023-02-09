@@ -18,6 +18,6 @@
         "rollup.config.ts",
         "scripts/**/*.ts",
         "src/**/*.ts",
-        "index.d.ts"
+        "types/*.d.ts"
     ]
 }
