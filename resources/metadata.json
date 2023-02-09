@@ -1,0 +1,9 @@
+{
+    "name": "Whats Up",
+    "description": "Shows next calendar event in a panel",
+    "uuid": "whats-up@muerwre",
+    "version": 1,
+    "shell-version": ["42", "43"],
+    "url": "https://github.com/paveloom-t/gnome-shell-memento-mori",
+    "settings-schema": "org.gnome.shell.extensions.whats-up"
+}

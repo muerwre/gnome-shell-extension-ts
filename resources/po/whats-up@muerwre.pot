@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: src/prefs.ts:24
+msgid "Appearance"
+msgstr ""
+
+#: src/prefs.ts:30
+msgid "Center"
+msgstr ""
+
+#: src/prefs.ts:49
+msgid "Extension index"
+msgstr ""
+
+#: src/prefs.ts:34
+msgid "Extension position"
+msgstr ""
+
+#: src/prefs.ts:50
+msgid "Index of the extension in the panel"
+msgstr ""
+
+#: src/prefs.ts:29
+msgid "Left"
+msgstr ""
+
+#: src/prefs.ts:35
+msgid "Position of the extension in the panel"
+msgstr ""
+
+#: src/prefs.ts:31
+msgid "Right"
+msgstr ""
+
+#. Name of the button
+#: src/indicator/index.ts:26
+msgid "Whats Up"
+msgstr ""

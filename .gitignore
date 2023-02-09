@@ -1,0 +1,9 @@
+# Bun
+node_modules
+
+# Rollup
+dist
+
+# GJS bindings
+@gi-types
+docs-lock.json
